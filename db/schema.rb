@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_02_10_225503) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_21_120000) do
   create_table "entries", force: :cascade do |t|
-    t.string "title"
+    t.datetime "created_at", null: false
     t.text "description"
     t.date "occurred_on"
     t.integer "place_id"
-    t.datetime "created_at", null: false
+    t.string "title"
     t.datetime "updated_at", null: false
   end
 
@@ -25,5 +25,4 @@ ActiveRecord::Schema[7.1].define(version: 2022_02_10_225503) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 end

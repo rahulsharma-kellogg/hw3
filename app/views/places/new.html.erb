@@ -1,0 +1,17 @@
+<h1>New Place</h1>
+<h2> Please input the name of the new city you have traveled to!</h2>
+
+<%= form_with url: places_path, method: :post, local: true do |form| %>
+  <% if @place.errors.any? %>
+    <p> An error has occured - likely due to a duplicate entry. Check if you have already added this location before and try again.<p>
+  <% end %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <%= form.submit "Create Post" %>
+<% end %>
+
+<p><%= link_to "Return to Travel Log", "/places" %></p>
